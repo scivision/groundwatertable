@@ -6,7 +6,7 @@ Loads .SHP shape files and plots groundwater over them.
 
 Install
 =======
-`reference <http://gis.stackexchange.com/a/74060)>`_::
+`reference <http://gis.stackexchange.com/a/74060>`_::
 
     apt install libgdal-dev
     export CPLUS_INCLUDE_PATH=/usr/include/gdal
