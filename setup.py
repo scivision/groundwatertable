@@ -15,7 +15,7 @@ setup(name='groundwatertable',
       version = '0.1',
       description='Plotting of groundwater table using .shp shape files.',
       author = 'Michael Hirsch, Ph.D.',
-      url = 'https://github.com/scienceopen/groundwatertable',
+      url = 'https://github.com/scivision/groundwatertable',
       classifiers=[
       'Intended Audience :: Science/Research',
       'Development Status :: 3 - Alpha',
