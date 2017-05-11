@@ -2,13 +2,15 @@
 """
 apt install libgdal-dev
 """
+req = ['nose','numpy','matplotlib','basemap',]
+import pip
+try:
+    import conda.cli
+    conda.cli.main('install',*req)
+except Exception as e:
+    pip.main(['install'] + req)
+# %%
 from setuptools import setup
-
-
-req = ['gdal','nose','numpy','matplotlib',
-       'basemap',]
-
-print(req)
 
 setup(name='groundwatertable',
       packages=['groundwatertable'],
@@ -23,7 +25,5 @@ setup(name='groundwatertable',
       'Topic :: Scientific/Engineering :: GIS',
       'Programming Language :: Python :: 3.6',
       ],
-      install_requires=req,
-      dependency_links=['https://downloads.sourceforge.net/project/matplotlib/matplotlib-toolkits/basemap-1.0.7/basemap-1.0.7.tar.gz',],
 	  )
 
