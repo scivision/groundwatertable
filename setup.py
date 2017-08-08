@@ -25,5 +25,6 @@ setup(name='groundwatertable',
       'Topic :: Scientific/Engineering :: GIS',
       'Programming Language :: Python :: 3.6',
       ],
+      install_requires=req,
 	  )
 

@@ -11,7 +11,7 @@ def dumbwaterplot(datfn,shpfn,county):
     """
     not geographically registered, for where coordinate transform is not yet known
     """
-    assert Path(datfn).is_file(),'{} not found'.format(datfn)
+    assert Path(datfn).is_file(),f'{datfn} not found'
     ds = gdal.Open(datfn, gdal.GA_ReadOnly)
 
     wt = ds.ReadAsArray()
@@ -20,7 +20,7 @@ def dumbwaterplot(datfn,shpfn,county):
 
     xy = makegrid(ds)
 #%% shape (points)
-    assert Path(shpfn).is_file(),'{} not found'.format(shpfn)
+    assert Path(shpfn).is_file(),f'{shpfn} not found'
     ps = ogr.Open(shpfn, gdal.GA_ReadOnly)
     layer = ps.GetLayer(0)
 
