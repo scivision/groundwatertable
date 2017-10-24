@@ -3,12 +3,15 @@
 apt install libgdal-dev
 """
 req = ['nose','numpy','matplotlib','basemap',]
+pipreq=['gdal']
+# %%
 import pip
 try:
     import conda.cli
     conda.cli.main('install',*req)
 except Exception as e:
     pip.main(['install'] + req)
+pip.main(['install'] + pipreq)
 # %%
 from setuptools import setup
 
@@ -23,8 +26,8 @@ setup(name='groundwatertable',
       'Development Status :: 3 - Alpha',
       'License :: OSI Approved :: MIT License',
       'Topic :: Scientific/Engineering :: GIS',
-      'Programming Language :: Python :: 3.6',
+      'Programming Language :: Python :: 3',
       ],
-      install_requires=req,
+      install_requires=req+pipreq,
 	  )
 
