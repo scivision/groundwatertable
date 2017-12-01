@@ -2,22 +2,15 @@
 """
 apt install libgdal-dev
 """
-req = ['nose','numpy','matplotlib','basemap',]
-pipreq=['gdal']
+install_requires = ['nose','numpy','basemap','gdal']
+tests_require=['nose','coveralls']
+
 # %%
-import pip
-try:
-    import conda.cli
-    conda.cli.main('install',*req)
-except Exception as e:
-    pip.main(['install'] + req)
-pip.main(['install'] + pipreq)
-# %%
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(name='groundwatertable',
-      packages=['groundwatertable'],
-      version = '0.1',
+      packages=find_packages(),
+      version = '0.1.0',
       description='Plotting of groundwater table using .shp shape files.',
       author = 'Michael Hirsch, Ph.D.',
       url = 'https://github.com/scivision/groundwatertable',
@@ -28,6 +21,10 @@ setup(name='groundwatertable',
       'Topic :: Scientific/Engineering :: GIS',
       'Programming Language :: Python :: 3',
       ],
-      install_requires=req+pipreq,
+      install_requires=install_requires,
+      extras_require={'plot':['matplotlib'],
+                      'tests':tests_require,},
+      tests_require=tests_require,
+      python_requires='>=3.5',
 	  )
 

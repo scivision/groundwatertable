@@ -11,6 +11,8 @@ Install
     apt install gcc libgdal-dev
     
     CPLUS_INCLUDE_PATH=/usr/include/gdal C_INCLUDE_PATH=/usr/include/gdal python setup.py develop --include-dirs=/usr/include/gdal/
+
+    pip install -e .
     
 Notes
 -----
