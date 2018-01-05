@@ -6,16 +6,28 @@ Loads ``.SHP`` shape files and plots groundwater over them.
 
 Install
 =======
-`reference <http://gis.stackexchange.com/a/74060>`_::
+The easiest way to get GDAL is from Anaconda/Miniconda Python::
 
-    apt install gcc libgdal-dev
-    
-    CPLUS_INCLUDE_PATH=/usr/include/gdal C_INCLUDE_PATH=/usr/include/gdal python setup.py develop --include-dirs=/usr/include/gdal/
+    conda install gdal cartopy
 
     pip install -e .
     
+    
+Usage
+=====
+::
+
+    ./PlotWatertable.py data/county/ data/county.shp
+    
+`county/` is a folder containing ``hdr.adf`` and ``w001w001.adf`` if it's AIG data.
+
+`GDAL format reference <http://www.gdal.org/frmt_various.html>`_
+
+
+
+    
 Notes
------
+=====
 
 If you get error
 
@@ -34,6 +46,12 @@ or
 
 
 your ``libgdal-dev`` may be an old version.
+
+`reference <http://gis.stackexchange.com/a/74060>`_::
+
+    apt install gcc libgdal-dev
+    
+    CPLUS_INCLUDE_PATH=/usr/include/gdal C_INCLUDE_PATH=/usr/include/gdal python setup.py develop --include-dirs=/usr/include/gdal/
 
 
 The easiest fix may be to use your system's ``python3-gdal``::

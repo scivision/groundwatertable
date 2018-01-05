@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 """
-apt install libgdal-dev
+conda install gdal cartopy
 """
-install_requires = ['nose','numpy','basemap','gdal']
+install_requires = ['numpy','cartopy','gdal']
 tests_require=['nose','coveralls']
 
 # %%
