@@ -56,7 +56,7 @@ your ``libgdal-dev`` may be an old version.
 
 The easiest fix may be to use your system's ``python3-gdal``::
 
-    apt install python3-gdal python3-matplotlib python3-mpltoolkits.basemap python3-numpy
+    apt install python3-gdal python3-matplotlib python3-numpy
 
 
     /usr/bin/python3 PlotWatertable.py
